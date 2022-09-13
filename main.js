@@ -40,7 +40,7 @@ export default class Sketch {
 
     this.cameraGroup = new THREE.Group();
     this.scene.add(this.cameraGroup)
-    const spaceTexture = new THREE.TextureLoader().load('./assets/space.jpg');
+    const spaceTexture = new THREE.TextureLoader().load('./space.jpg');
     this.scene.background = spaceTexture
 
     this.cameraGroup.add(this.camera)

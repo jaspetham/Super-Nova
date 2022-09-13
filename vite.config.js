@@ -5,6 +5,7 @@ import glsl from 'vite-plugin-glsl';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base:'/Super-Nova/',
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
