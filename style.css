@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 :root{
-  --purple-clr: #6200EA;
+  --clr-purple: #6200EA;
+  --bg-gradient: linear-gradient(99deg, rgba(0, 0, 0, 1) 10%, rgba(28, 20, 60, 1) 90%);
+  --clr-grey:#595959;
+  --clr-black:#1A1A1A;
 }
 
 body {
@@ -16,7 +19,7 @@ body {
   padding: 0;
 }
 
-section{
+#mainContent{
   position: relative;
   z-index: 10;
 }
@@ -27,7 +30,7 @@ header{
 }
 
 header.header-change{
-  background:black;
+  background:var(--clr-black);
 }
 
 #container {
@@ -86,26 +89,154 @@ canvas {
 }
 
 .purple-text{
-  color:var(--purple-clr)
+  color:var(--clr-purple)
 }
 
 .signup-form{
-  background:var(--purple-clr);
+  background:var(--clr-purple);
   border-radius:20px;
   grid-row: 3;
   place-self: center;
 }
 
 .primary-btn{
-  color:var(--purple-clr);
   font-weight: 600;
   border-radius:40px;
   text-transform: uppercase;
-  background-color: white;
   padding:5px 15px;
   margin:auto;
+  transition: all .5s ease-out;
+}
+.primary-btn.btn-100{
+  padding:5px 15px;
+}
+.primary-btn.btn-200{
+  padding:10px 30px;
+}
+.primary-btn.white-var{
+  color: var(--clr-purple);
+  background-color: white;
+}
+.primary-btn.grey-var{
+  color: white;
+  background-color: var(--clr-grey);
+}
+.series{
+  max-width:40ch;
+  margin:0 auto;
+}
+#mainContent{
+  min-height:100vh;
+  background:var(--bg-gradient);
 }
 
+.series-img{
+  border-radius:25px;
+  border:2px solid grey;
+}
+
+.plan-details{
+  max-width:max(65vw,1200px);
+  margin-inline: auto;
+}
+
+.plan-type{
+  border-radius: 60px;
+  background-color: var(--clr-black);
+  padding-inline:1.5rem;
+  max-width:clamp(500px, 40vw, 800px);
+  margin-inline: auto;
+}
+
+.plan-text{
+  font-weight: 400;
+  padding:1.5rem 0;
+  cursor: pointer;
+  transition:  font-weight .5s ease-out;
+}
+
+.plan-text.active{
+  font-weight: 600;
+}
+
+#plan-pill{
+  background:var(--clr-purple);
+  border-radius:60px;
+  top:50%;
+  transform: translateY(-50%);
+  position: absolute;
+  width:clamp(50px,40vw,35%);
+  height:clamp(25px,25vh,100%);
+  transition:left .25s ease-out;
+}
+#plan-pill.first{
+  left:0%;
+}
+#plan-pill.second{
+  left:33%;
+}
+#plan-pill.third{
+  left:66%;
+}
+.recommend{
+  position: absolute;
+  font-size: 14px;
+  left:50%;
+  bottom:-50px;
+  transform:translateX(-50%);
+  cursor:default;
+  font-weight: 400;
+}
+.detail{
+  border:2px solid var(--clr-grey);
+  border-radius:20px;
+  background:var(--clr-black);
+  padding:25px 35px;
+  cursor: pointer;
+}
+.faded-line{
+  border-color:var(--clr-grey);
+}
+.detail-grid{
+  display: grid;
+  grid-template-rows: minmax(20vh,150px) 100px minmax(10vh,150px);
+}
+
+
+.line-recommend{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  font-size: 10px;
+  background:var(--clr-grey);
+  border-radius:25px;
+  padding:5px 20px;
+}
+
+:where(.plan-details .detail.active, .plan-details .detail:hover) .line-recommend {
+  background: var(--clr-purple);
+}
+:where(.plan-details .detail.active, .plan-details .detail:hover){
+  border-color: var(--clr-purple)!important;
+}
+:where(.plan-details .detail.active, .plan-details .detail:hover) .faded-line {
+  border-color: var(--clr-purple);
+}
+:where(.plan-details .detail.active, .plan-details .detail:hover) .price button {
+  background-color: var(--clr-purple)!important;
+}
+:where(.plan-details .detail.active, .plan-details .detail:hover) .price-tag span:not(:last-child) {
+  color: var(--clr-purple);
+}
+
+.detail-grid .price{
+  grid-row: 3;
+  align-self: end;
+}
+.price-tag{
+  color:var(--clr-grey);
+}
 /* tablet size */
 @media (max-width: 35em) {
   header{
@@ -120,5 +251,17 @@ canvas {
   }
   .form-control{
     font-size: 15px;
+  }
+  .plan-type{
+    padding:0.25rem;
+  }
+  .plan-text{
+    padding:1rem 0;
+  }
+  .recommend{
+    font-size:10px;
+  }
+  .detail{
+    padding:18px 30px;
   }
 }
