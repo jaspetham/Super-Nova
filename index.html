@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Super Nova</title>
-    <script type="module" crossorigin src="/Super-Nova/assets/index.a087e341.js"></script>
-    <link rel="stylesheet" href="/Super-Nova/assets/index.aba72a9d.css">
+    <script type="module" crossorigin src="/Super-Nova/assets/index.d4d5c3ed.js"></script>
+    <link rel="stylesheet" href="/Super-Nova/assets/index.ae0d9cd6.css">
   </head>
   <body>    
     <header class="sticky bg-transparent top-0 z-50">
@@ -31,17 +31,118 @@
           </p>
           <div class="form flex gap-4 md:justify-between flex-col md:flex-row">
             <input class="form-control flex-1" type="email" placeholder="example@email.com">
-            <button class="primary-btn md:text-xl text-sm">Sign up now!</button>
+            <button class="primary-btn btn-100 white-var md:text-xl text-sm">Sign up now!</button>
           </div>
           <p class="md:text-md text-sm">Ready to watch? Enter your email and enjoy the best of our content.</p>
         </div>
       </div>      
     </div>
-    <section class="h-screen bg-black z-10">
-      <h1>hello 1</h1>
-    </section>
-    <section class="h-screen bg-black z-10">
-      <h1>hello 1</h1>
+    <section id="mainContent" class="z-10 md:px-5 md:py-10 p-6">
+      <div class="container mx-auto text-center">
+        <div class="sponsored-series mt-5">
+          <h1 class="md:text-4xl text-xl md:mb-12 mb-6">Sponsored Series</h1>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="series flow">
+              <img src="/Super-Nova/assets/card-1.db7a9b41.png" alt="card" class="series-img">
+              <p class="text-2xl">Cosmic Cliffs</p>
+              <p>This landscape of “mountains” and “valleys” speckled with glittering stars is actually the edge of a nearby, young, star-forming region called NGC 3324 in the Carina Nebula.</p>
+            </div>
+            <div class="series flow">
+              <img src="/Super-Nova/assets/card-2.d02e5dae.png" alt="card" class="series-img">
+              <p class="text-2xl">Particle Fever</p>
+              <p>As the Large Hadron Collider is about to be launched for the first time, physicists are on the cusp of the greatest scientific discovery of all time -- or perhaps their greatest failure.</p>
+            </div>
+            <div class="series flow">
+              <img src="/Super-Nova/assets/card-3.ac9c9c48.png" alt="card" class="series-img">
+              <p class="text-2xl">Red Heaven</p>
+              <p>After a year of living on “Mars” the lines between reality and simulation blur. Following a crew of 6 led by a female physicist, RED HEAVEN takes viewers inside a year-long NASA psychological experiment</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="choose-plan my-20">
+          <h1 class="md:text-4xl text-xl md:mb-6 mb-3">Choose your plan</h1>
+          <p>Discover our plans and choose the best option for you to enjoy our content.</p>
+          <div class="plan-type flex relative gap-3 mt-10">
+            <div id="plan-pill" class="second"></div>
+            <div id="plan-1" class="plan-btn uppercase plan-text w-full md:text-2xl text-md z-5 relative" plan-id="1">monthly</div>
+            <div id="plan-2" class="plan-btn uppercase plan-text w-full md:text-2xl text-md z-5 relative active" plan-id="2">
+              6 months
+              <div class="recommend">
+                <span class="flex gap-3 items-center">
+                  <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.80606 7.72151C1.61306 7.82051 1.39406 7.64701 1.43306 7.42551L1.84806 5.06051L0.0865591 3.38251C-0.0779409 3.22551 0.00755914 2.93851 0.228059 2.90751L2.67706 2.55951L3.76906 0.396006C3.86756 0.201006 4.13406 0.201006 4.23256 0.396006L5.32456 2.55951L7.77356 2.90751C7.99406 2.93851 8.07956 3.22551 7.91456 3.38251L6.15356 5.06051L6.56856 7.42551C6.60756 7.64701 6.38856 7.82051 6.19556 7.72151L4.00006 6.59351L1.80556 7.72151H1.80606Z" fill="#F5F5F5"/>
+                  </svg>
+                  Recommended
+                </span>
+              </div>
+            </div>
+            <div id="plan-3" class="plan-btn uppercase plan-text w-full md:text-2xl text-md z-5 relative" plan-id="3">yearly</div>
+          </div>
+        </div>
+        
+        <div class="plan-details my-20">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="detail" id="detail-1" plan-id="1">
+              <p class="text-2xl uppercase font-bold">monthly</p>
+              <hr class="my-8 faded-line">
+              <div class="detail-grid">
+                <div>
+                  <p class="md:text-xl text-md mb-5">At Infinity & Beyond you will find the best content about space.</p>
+                  <ul>
+                    <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Enjoy on all your devices</li>
+                    <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Watch on two screens</li>
+                    <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Watch anywhere you want</li>
+                    <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Resolution adapted to your device</li>
+                  </ul>
+                </div>
+                <div class="price">
+                  <div class="price-tag mb-5">
+                    <span class="font-extrabold text-md">$</span>
+                    <span class="font-extrabold text-5xl">19,90</span>
+                    <span>/month</span>
+                  </div>
+                  <button class="primary-btn grey-var text-xl btn-200">Sign up now!</button>
+                </div>
+              </div>
+            </div>
+            <div class="detail active" id="detail-2" plan-id="2">
+              <p class="text-2xl uppercase font-bold">6 months</p>
+              <div class="relative">
+                <hr class="my-8 faded-line"/>
+                <div class="line-recommend flex gap-3 items-center">
+                  <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.80606 7.72151C1.61306 7.82051 1.39406 7.64701 1.43306 7.42551L1.84806 5.06051L0.0865591 3.38251C-0.0779409 3.22551 0.00755914 2.93851 0.228059 2.90751L2.67706 2.55951L3.76906 0.396006C3.86756 0.201006 4.13406 0.201006 4.23256 0.396006L5.32456 2.55951L7.77356 2.90751C7.99406 2.93851 8.07956 3.22551 7.91456 3.38251L6.15356 5.06051L6.56856 7.42551C6.60756 7.64701 6.38856 7.82051 6.19556 7.72151L4.00006 6.59351L1.80556 7.72151H1.80606Z" fill="#F5F5F5"/>
+                  </svg>
+                  Recommended
+                </div>
+              </div>
+              <div class="detail-grid">
+                <div>
+                  <p class="md:text-xl text-md mb-5">At Infinity & Beyond you will find the best content about space.</p>
+                  <ul>
+                    <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Enjoy on all your devices</li>
+                    <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Watch on two screens</li>
+                    <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Watch anywhere you want</li>
+                    <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Resolution adapted to your device</li>
+                    <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> High resolution and 4k quality</li>
+                    <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Create as many profiles as you want</li>
+                    <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Download and watch offline</li>
+                  </ul>
+                </div>
+                <div class="price">
+                  <div class="price-tag mb-5">
+                    <span class="font-extrabold text-md">$</span>
+                    <span class="font-extrabold text-5xl">18,90</span>
+                    <span>/month</span>
+                  </div>
+                  <button class="primary-btn grey-var text-xl btn-200">Sign up now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     
     
