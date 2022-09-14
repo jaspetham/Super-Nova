@@ -9,8 +9,11 @@ window.addEventListener('scroll', function(){
         header.classList.remove('header-change');
     }
 })
-
 mainContent.style.setProperty('top',`calc(100vh - ${header.offsetHeight}px)`);
+
+window.addEventListener('resize', function(){
+    mainContent.style.setProperty('top',`calc(100vh - ${header.offsetHeight}px)`);
+})
 
 const plans = document.querySelectorAll('.plan-btn');
 const planPill = document.getElementById('plan-pill');
@@ -26,6 +29,21 @@ const details = document.querySelectorAll('.plan-details .detail');
 details.forEach((detail) =>{
     detail.addEventListener('click', (e) =>{
         setPlan(detail)
+    })
+})
+
+const accordions = document.querySelectorAll('.accordion-item');
+
+accordions.forEach((item)=>{
+    item.addEventListener('click',function(){
+        accordions.forEach((x) => {
+            x.classList.remove('active');
+        })
+        if(item.classList.contains('active')){
+            item.classList.remove('active');
+        }else{
+            item.classList.add('active');
+        }
     })
 })
 
@@ -64,3 +82,20 @@ function addPlanActive(id){
 function movePlanPill(val){
     planPill.classList.add(val);
 }
+
+const mobileNav = document.querySelector('.mobile-nav-toggle');
+const srOnly = document.querySelector('.sr-only');
+const mainNav = document.querySelector('.primary-navigation');
+
+mobileNav.addEventListener('click',function(){
+    var state = this.getAttribute('aria-expanded');
+    if(state == 'true'){
+        this.setAttribute('aria-expanded','false');
+        srOnly.setAttribute('aria-expanded','false');
+        mainNav.setAttribute('data-visible','false');
+    }else{
+        this.setAttribute('aria-expanded','true');
+        srOnly.setAttribute('aria-expanded','true');
+        mainNav.setAttribute('data-visible','true');
+    }
+})
