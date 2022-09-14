@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <title>Super Nova</title>
-    <script type="module" crossorigin src="/Super-Nova/assets/index.d4d5c3ed.js"></script>
-    <link rel="stylesheet" href="/Super-Nova/assets/index.ae0d9cd6.css">
+    <script type="module" crossorigin src="/Super-Nova/assets/index.b5755645.js"></script>
+    <link rel="stylesheet" href="/Super-Nova/assets/index.46a191bf.css">
   </head>
   <body>    
     <header class="sticky bg-transparent top-0 z-50">
@@ -14,7 +16,16 @@
         <div class="col-span-2">
           <img src="/Super-Nova/assets/logo.276ebdea.svg" alt="">
         </div>
-        <div class="col-span-1 flex justify-center items-center"></div>
+        <div class="col-span-1 flex justify-center items-center">
+          <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only" aria-expanded="false">Menu</span></button>
+          <ul class="flex gap-3 primary-navigation" data-visible="false">
+            <li class="text-xl"><a href="#container">Banner</a></li>
+            <li class="text-xl"><a href="#series">Series</a></li>
+            <li class="text-xl"><a href="#plan">Plan</a></li>
+            <li class="text-xl"><a href="#exclusive">Exclusive</a></li>
+            <li class="text-xl"><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <div id="container">      
@@ -37,9 +48,9 @@
         </div>
       </div>      
     </div>
-    <section id="mainContent" class="z-10 md:px-5 md:py-10 p-6">
-      <div class="container mx-auto text-center">
-        <div class="sponsored-series mt-5">
+    <section id="mainContent" class="z-10">
+      <div class="container mx-auto text-center md:px-5 md:py-10 p-6">
+        <div class="sponsored-series mt-5" id="series">
           <h1 class="md:text-4xl text-xl md:mb-12 mb-6">Sponsored Series</h1>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div class="series flow">
@@ -60,7 +71,7 @@
           </div>
         </div>
 
-        <div class="choose-plan my-20">
+        <div class="choose-plan my-20" id="plan">
           <h1 class="md:text-4xl text-xl md:mb-6 mb-3">Choose your plan</h1>
           <p>Discover our plans and choose the best option for you to enjoy our content.</p>
           <div class="plan-type flex relative gap-3 mt-10">
@@ -81,14 +92,14 @@
           </div>
         </div>
         
-        <div class="plan-details my-20">
+        <div class="plan-details my-20" id="">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div class="detail" id="detail-1" plan-id="1">
               <p class="text-2xl uppercase font-bold">monthly</p>
               <hr class="my-8 faded-line">
               <div class="detail-grid">
                 <div>
-                  <p class="md:text-xl text-md mb-5">At Infinity & Beyond you will find the best content about space.</p>
+                  <p class="md:text-xl text-md md:mb-5 mb-2">At Infinity & Beyond you will find the best content about space.</p>
                   <ul>
                     <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Enjoy on all your devices</li>
                     <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Watch on two screens</li>
@@ -97,7 +108,7 @@
                   </ul>
                 </div>
                 <div class="price">
-                  <div class="price-tag mb-5">
+                  <div class="price-tag md:mb-5 mb-2">
                     <span class="font-extrabold text-md">$</span>
                     <span class="font-extrabold text-5xl">19,90</span>
                     <span>/month</span>
@@ -119,7 +130,7 @@
               </div>
               <div class="detail-grid">
                 <div>
-                  <p class="md:text-xl text-md mb-5">At Infinity & Beyond you will find the best content about space.</p>
+                  <p class="md:text-xl text-md md:mb-5 mb-2">At Infinity & Beyond you will find the best content about space.</p>
                   <ul>
                     <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Enjoy on all your devices</li>
                     <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Watch on two screens</li>
@@ -131,7 +142,7 @@
                   </ul>
                 </div>
                 <div class="price">
-                  <div class="price-tag mb-5">
+                  <div class="price-tag md:mb-5 mb-2">
                     <span class="font-extrabold text-md">$</span>
                     <span class="font-extrabold text-5xl">18,90</span>
                     <span>/month</span>
@@ -140,9 +151,283 @@
                 </div>
               </div>
             </div>
+            <div class="detail" id="detail-3" plan-id="3">
+              <p class="text-2xl uppercase font-bold">yearly</p>
+              <hr class="my-8 faded-line">
+              <div class="detail-grid">
+                <div>
+                  <p class="md:text-xl text-md md:mb-5 mb-2">At Infinity & Beyond you will find the best content about space.</p>
+                  <ul>
+                    <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Enjoy on all your devices</li>
+                    <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Watch on multiple screens</li>
+                    <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Watch anywhere you want</li>
+                    <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Resolution adapted to your device</li>
+                    <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> High resolution and 4k quality</li>
+                    <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Create as many profiles as you want</li>
+                    <li class="flex items-center gap-3 font-semibold"> <span class="text-xl">+</span> Download and watch offline</li>
+                  </ul>
+                </div>
+                <div class="price">
+                  <div class="price-tag">
+                    <span class="font-extrabold text-md">$</span>
+                    <span class="font-extrabold text-5xl">17,90</span>
+                    <span>/month</span>
+                  </div>
+                  <div class="md:mb-5 mb-2">
+                    <span class="font-extrabold text-sm">$</span>
+                    <span class="font-extrabold text-2xl">210</span>
+                    <span>/pay in full</span>
+                  </div>
+                  <button class="primary-btn grey-var text-xl btn-200">Sign up now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="my-10">
+            <p>*See more information about payment plans clicking here.</p>
           </div>
         </div>
+
+        <div class="exclusive-content my-20" id="exclusive">
+          <div class="container mx-auto text-center">
+            <h1 class="md:text-4xl text-xl md:mb-6 mb-3">Sponsored Series</h1>
+            <p class="md:mb-12 mb-6 mx-auto" style="max-width:50ch">See our exclusive content and learn more about what has been researched and produced about the space and beyond</p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
+              <div class="content text-left flow" style="--flow-space:0.25rem">
+                <div class="mb-5 relative">
+                  <img src="/Super-Nova/assets/content-1.2165c2e9.png" alt="content" class="bordered-img">
+                  <div class="original-text flex items-center gap-1 py-1 px-3">
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.80606 7.72151C1.61306 7.82051 1.39406 7.64701 1.43306 7.42551L1.84806 5.06051L0.0865591 3.38251C-0.0779409 3.22551 0.00755914 2.93851 0.228059 2.90751L2.67706 2.55951L3.76906 0.396006C3.86756 0.201006 4.13406 0.201006 4.23256 0.396006L5.32456 2.55951L7.77356 2.90751C7.99406 2.93851 8.07956 3.22551 7.91456 3.38251L6.15356 5.06051L6.56856 7.42551C6.60756 7.64701 6.38856 7.82051 6.19556 7.72151L4.00006 6.59351L1.80556 7.72151H1.80606Z" fill="#F5F5F5"/>
+                    </svg>
+                    Original Infinity & Beyond
+                  </div>
+                </div>
+                <p class="text-xl md:text-2xl">Life As An Astronaut</p>
+                <p class="grey-text">Click to see an exclusive trailer</p>
+              </div>
+              <div class="content text-left flow" style="--flow-space:0.25rem">
+                <div class="mb-5 relative">
+                  <img src="/Super-Nova/assets/content-2.425187c6.png" alt="content" class="bordered-img">
+                  <div class="original-text flex items-center gap-1 py-1 px-3">
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.80606 7.72151C1.61306 7.82051 1.39406 7.64701 1.43306 7.42551L1.84806 5.06051L0.0865591 3.38251C-0.0779409 3.22551 0.00755914 2.93851 0.228059 2.90751L2.67706 2.55951L3.76906 0.396006C3.86756 0.201006 4.13406 0.201006 4.23256 0.396006L5.32456 2.55951L7.77356 2.90751C7.99406 2.93851 8.07956 3.22551 7.91456 3.38251L6.15356 5.06051L6.56856 7.42551C6.60756 7.64701 6.38856 7.82051 6.19556 7.72151L4.00006 6.59351L1.80556 7.72151H1.80606Z" fill="#F5F5F5"/>
+                    </svg>
+                      Original Infinity & Beyond
+                  </div>
+                </div>
+                <p class="text-xl md:text-2xl">The Space Shuttle</p>
+                <p class="grey-text">Click to see an exclusive trailer</p>
+              </div>
+              <div class="content text-left flow" style="--flow-space:0.25rem">
+                <div class="mb-5 relative">
+                  <img src="/Super-Nova/assets/content-3.60045c63.png" alt="content" class="bordered-img">
+                  <div class="original-text flex items-center gap-1 py-1 px-3">
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.80606 7.72151C1.61306 7.82051 1.39406 7.64701 1.43306 7.42551L1.84806 5.06051L0.0865591 3.38251C-0.0779409 3.22551 0.00755914 2.93851 0.228059 2.90751L2.67706 2.55951L3.76906 0.396006C3.86756 0.201006 4.13406 0.201006 4.23256 0.396006L5.32456 2.55951L7.77356 2.90751C7.99406 2.93851 8.07956 3.22551 7.91456 3.38251L6.15356 5.06051L6.56856 7.42551C6.60756 7.64701 6.38856 7.82051 6.19556 7.72151L4.00006 6.59351L1.80556 7.72151H1.80606Z" fill="#F5F5F5"/>
+                    </svg>
+                    Original Infinity & Beyond
+                  </div>
+                </div>
+                <p class="text-xl md:text-2xl">The Future of Fiction</p>
+                <p class="grey-text">Click to see an exclusive trailer</p>
+              </div>
+              <div class="content text-left flow" style="--flow-space:0.25rem">
+                <div class="mb-5 relative">
+                  <img src="/Super-Nova/assets/content-4.8a888f51.png" alt="content" class="bordered-img">
+                  <div class="original-text flex items-center gap-1 py-1 px-3">
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.80606 7.72151C1.61306 7.82051 1.39406 7.64701 1.43306 7.42551L1.84806 5.06051L0.0865591 3.38251C-0.0779409 3.22551 0.00755914 2.93851 0.228059 2.90751L2.67706 2.55951L3.76906 0.396006C3.86756 0.201006 4.13406 0.201006 4.23256 0.396006L5.32456 2.55951L7.77356 2.90751C7.99406 2.93851 8.07956 3.22551 7.91456 3.38251L6.15356 5.06051L6.56856 7.42551C6.60756 7.64701 6.38856 7.82051 6.19556 7.72151L4.00006 6.59351L1.80556 7.72151H1.80606Z" fill="#F5F5F5"/>
+                    </svg>
+                    Original Infinity & Beyond
+                  </div>
+                </div>
+                <p class="text-xl md:text-2xl">Life Outside the Solar</p>
+                <p class="grey-text">Click to see an exclusive trailer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-device my-20" id="">
+          <div class="container mx-auto text-center">
+            <h1 class="md:text-4xl text-xl md:mb-6 mb-3">A complete experience available on your favorite devices</h1>
+            <p class="md:mb-12 mb-6 mx-auto">Compatible with all devices and download available depending on subscription plan</p>
+            <div class="flex justify-center">
+              <img src="/Super-Nova/assets/device.3330d562.png" alt="device">
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mx-auto" style="max-width:clamp(300px,50vw,800px);">
+              <div class="device text-center">
+                <p class="text-lg md:text-xl uppercase font-semibold mb-1 md:mb-3">Computer</p>
+                <ul class="list-none">
+                  <li class="text-md font-light">Chrome OS</li>
+                  <li class="text-md font-light">Mac OS</li>
+                  <li class="text-md font-light">Windows PC</li>
+                  <li class="text-md font-light">Linux</li>
+                  <li class="text-md font-light">See More</li>
+                </ul>
+              </div>
+              <div class="device text-center">
+                <p class="text-lg md:text-xl uppercase font-semibold mb-1 md:mb-3">TV</p>
+                <ul class="list-none">
+                  <li class="text-md font-light">Amazon Fire TV</li>
+                  <li class="text-md font-light">Android TV</li>
+                  <li class="text-md font-light">Apple TV</li>
+                  <li class="text-md font-light">Chromecast</li>
+                  <li class="text-md font-light">See More</li>
+                </ul>
+              </div>
+              <div class="device text-center">
+                <p class="text-lg md:text-xl uppercase font-semibold mb-1 md:mb-3">Video Games</p>
+                <ul class="list-none">
+                  <li class="text-md font-light">PS4</li>
+                  <li class="text-md font-light">PS5</li>
+                  <li class="text-md font-light">Xbox One</li>
+                  <li class="text-md font-light">Xbox Series X</li>
+                  <li class="text-md font-light">See More</li>
+                </ul>
+              </div>
+              <div class="device text-center">
+                <p class="text-lg md:text-xl uppercase font-semibold mb-3">Cellphones & Tablets</p>
+                <ul class="list-none">
+                  <li class="text-md font-light">Samsung</li>
+                  <li class="text-md font-light">Iphones</li>
+                  <li class="text-md font-light">Xiomi</li>
+                  <li class="text-md font-light">Windows Phone</li>
+                  <li class="text-md font-light">See More</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="faq my-20" id="faq">
+          <div class="container mx-auto text-center">
+            <h1 class="md:text-4xl text-xl md:mb-6 mb-3">A complete experience available on your favourite devices</h1>
+            <div class="accordion my-10" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Already subscribed to Infinity & Beyond?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim eius quo delectus laborum ratione minima veritatis, magnam rerum soluta nobis beatae voluptatum, exercitationem repellendus quam reprehenderit? Alias eaque dolores voluptate!</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  What is included in the Infinity & Beyond subscription plan?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim eius quo delectus laborum ratione minima veritatis, magnam rerum soluta nobis beatae voluptatum, exercitationem repellendus quam reprehenderit? Alias eaque dolores voluptate!</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    What are the payment methods?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim eius quo delectus laborum ratione minima veritatis, magnam rerum soluta nobis beatae voluptatum, exercitationem repellendus quam reprehenderit? Alias eaque dolores voluptate!</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                    How many profiles can I create?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim eius quo delectus laborum ratione minima veritatis, magnam rerum soluta nobis beatae voluptatum, exercitationem repellendus quam reprehenderit? Alias eaque dolores voluptate!</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                    What are the differences in subscription plans?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim eius quo delectus laborum ratione minima veritatis, magnam rerum soluta nobis beatae voluptatum, exercitationem repellendus quam reprehenderit? Alias eaque dolores voluptate!</div>
+                </div>
+              </div>
+            </div>
+            <div class="text-left"><a class="underline cursor-pointer grey-text hover:text-white">See more questions that can help you!</a></div>
+          </div>  
+        </div>
       </div>
+      <footer class="px-5 md:py-10 p-6">
+        <div class="flex flex-col items-center footer-wrap">
+          <img src="/Super-Nova/assets/logo.276ebdea.svg" alt="logo" class="mb-3 md:mb-5">
+          <div class="grid grid-cols-1 md:grid-cols-4 w-full items-end my-4">
+            <div class="left">
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="flex flex-col gap-2">
+                  <a class="cursor-pointer">Audio Description</a>
+                  <a class="cursor-pointer">Media Center</a>
+                  <a class="cursor-pointer">Cookie Preferences</a>
+                  <a class="cursor-pointer">Devices</a>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                  <a class="cursor-pointer">Gift Cards</a>
+                  <a class="cursor-pointer">Jobs Information</a>
+                  <a class="cursor-pointer">Corporate Information</a>
+                  <a class="cursor-pointer">Legal Notices</a>
+                </div>
+
+                <div class="flex flex-col gap-2 final-footer-grid">
+                  <a class="cursor-pointer">Contact Us</a>
+                  <a class="cursor-pointer">Term Of Use</a>
+                  <a class="cursor-pointer">Privacy</a>
+                  <a class="cursor-pointer">Help Center</a>
+                </div>
+
+              </div>
+            </div>
+            <div class="right mt-3 md:mt-0">
+              <div class="mb-3">111 8th Ave, New York, NY 10011, United States</div>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="flex justify-center md:justify-start items-center">
+                  <a class="cursor-pointer social-wrap">
+                    <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.3283 35.2829V21.6229H26.9366L27.6216 16.2745H22.3283V12.8679C22.3283 11.3245 22.7583 10.2679 24.9733 10.2679H27.78V5.49955C26.4144 5.3532 25.0417 5.28253 23.6683 5.28788C19.595 5.28788 16.7983 7.77455 16.7983 12.3395V16.2645H12.22V21.6129H16.8083V35.2829H22.3283Z"/>
+                    </svg>
+                  </a>
+                </div>
+                <div class="flex justify-center md:justify-start items-center">
+                  <a class="cursor-pointer social-wrap">
+                    <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.9999 12.2766C15.5663 12.2766 11.9882 15.8547 11.9882 20.2883C11.9882 24.7219 15.5663 28.3 19.9999 28.3C24.4335 28.3 28.0117 24.7219 28.0117 20.2883C28.0117 15.8547 24.4335 12.2766 19.9999 12.2766ZM19.9999 25.4953C17.1328 25.4953 14.7929 23.1555 14.7929 20.2883C14.7929 17.4211 17.1328 15.0812 19.9999 15.0812C22.8671 15.0812 25.207 17.4211 25.207 20.2883C25.207 23.1555 22.8671 25.4953 19.9999 25.4953ZM28.3398 10.0812C27.3046 10.0812 26.4687 10.9172 26.4687 11.9523C26.4687 12.9875 27.3046 13.8234 28.3398 13.8234C29.3749 13.8234 30.2109 12.9914 30.2109 11.9523C30.2112 11.7065 30.163 11.4631 30.0691 11.2359C29.9752 11.0088 29.8373 10.8024 29.6635 10.6286C29.4897 10.4548 29.2833 10.317 29.0562 10.223C28.829 10.1291 28.5856 10.0809 28.3398 10.0812ZM35.6171 20.2883C35.6171 18.132 35.6367 15.9953 35.5156 13.843C35.3945 11.343 34.8242 9.12421 32.996 7.29608C31.164 5.46405 28.9492 4.89765 26.4492 4.77655C24.2929 4.65546 22.1562 4.67499 20.0038 4.67499C17.8476 4.67499 15.7109 4.65546 13.5585 4.77655C11.0585 4.89765 8.83979 5.46796 7.01166 7.29608C5.17963 9.12811 4.61322 11.343 4.49213 13.843C4.37103 15.9992 4.39057 18.1359 4.39057 20.2883C4.39057 22.4406 4.37103 24.5812 4.49213 26.7336C4.61322 29.2336 5.18353 31.4523 7.01166 33.2805C8.84369 35.1125 11.0585 35.6789 13.5585 35.8C15.7148 35.9211 17.8515 35.9016 20.0038 35.9016C22.1601 35.9016 24.2968 35.9211 26.4492 35.8C28.9492 35.6789 31.1679 35.1086 32.996 33.2805C34.8281 31.4484 35.3945 29.2336 35.5156 26.7336C35.6406 24.5812 35.6171 22.4445 35.6171 20.2883ZM32.1796 29.4992C31.8945 30.2101 31.5507 30.7414 30.9999 31.2883C30.4492 31.8391 29.9218 32.1828 29.2109 32.468C27.1562 33.2844 22.2773 33.1008 19.9999 33.1008C17.7226 33.1008 12.8398 33.2844 10.7851 32.4719C10.0742 32.1867 9.54291 31.843 8.99604 31.2922C8.44525 30.7414 8.1015 30.2141 7.81635 29.5031C7.00385 27.4445 7.18744 22.5656 7.18744 20.2883C7.18744 18.0109 7.00385 13.1281 7.81635 11.0734C8.1015 10.3625 8.44525 9.83124 8.99604 9.28437C9.54682 8.73749 10.0742 8.38983 10.7851 8.10468C12.8398 7.29218 17.7226 7.47577 19.9999 7.47577C22.2773 7.47577 27.1601 7.29218 29.2148 8.10468C29.9257 8.38983 30.457 8.73358 31.0038 9.28437C31.5546 9.83515 31.8984 10.3625 32.1835 11.0734C32.996 13.1281 32.8124 18.0109 32.8124 20.2883C32.8124 22.5656 32.996 27.4445 32.1796 29.4992Z"/>
+                    </svg>
+                  </a>
+                </div>
+                <div class="flex justify-center md:justify-start items-center">
+                  <a class="cursor-pointer social-wrap">
+                    <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M31.5239 6.87053C30.4106 7.36386 29.2146 7.6972 27.9573 7.84786C29.2546 7.07159 30.2252 5.84982 30.6879 4.41053C29.4691 5.13452 28.1351 5.64412 26.7439 5.9172C25.8084 4.91835 24.5693 4.2563 23.219 4.03383C21.8687 3.81136 20.4827 4.04092 19.2763 4.68687C18.0698 5.33282 17.1103 6.35901 16.5468 7.60613C15.9833 8.85326 15.8473 10.2515 16.1599 11.5839C13.6902 11.4599 11.2741 10.8179 9.0685 9.69974C6.86289 8.58154 4.91706 7.01208 3.35727 5.0932C2.82393 6.0132 2.51727 7.07986 2.51727 8.21586C2.51667 9.23852 2.76851 10.2455 3.25044 11.1475C3.73237 12.0495 4.42948 12.8186 5.27993 13.3865C4.29364 13.3551 3.3291 13.0886 2.4666 12.6092V12.6892C2.4665 14.1235 2.96264 15.5137 3.87084 16.6239C4.77904 17.734 6.04336 18.4958 7.44927 18.7799C6.53431 19.0275 5.57505 19.064 4.64393 18.8865C5.0406 20.1207 5.81326 21.1999 6.85376 21.9731C7.89425 22.7463 9.15049 23.1748 10.4466 23.1985C8.24638 24.9257 5.52912 25.8626 2.73193 25.8585C2.23644 25.8587 1.74137 25.8297 1.24927 25.7719C4.08857 27.5974 7.39372 28.5663 10.7693 28.5625C22.1959 28.5625 28.4426 19.0985 28.4426 10.8905C28.4426 10.6239 28.4359 10.3545 28.4239 10.0879C29.639 9.20916 30.6878 8.12106 31.5213 6.87453L31.5239 6.87053V6.87053Z"/>
+                    </svg>
+                  </a>
+                </div>
+                <div class="flex justify-center">
+                  <a class="cursor-pointer social-wrap">
+                    <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M36.7695 11.8545C36.5703 11.1125 36.1797 10.4358 35.6367 9.89213C35.0938 9.3485 34.4176 8.95701 33.6758 8.75684C30.9453 8.02246 20 8.02246 20 8.02246C20 8.02246 9.05469 8.02246 6.32422 8.75293C5.58211 8.95246 4.90556 9.34373 4.36252 9.88746C3.81948 10.4312 3.42906 11.1082 3.23047 11.8506C2.5 14.585 2.5 20.2881 2.5 20.2881C2.5 20.2881 2.5 25.9912 3.23047 28.7217C3.63281 30.2295 4.82031 31.417 6.32422 31.8193C9.05469 32.5537 20 32.5537 20 32.5537C20 32.5537 30.9453 32.5537 33.6758 31.8193C35.1836 31.417 36.3672 30.2295 36.7695 28.7217C37.5 25.9912 37.5 20.2881 37.5 20.2881C37.5 20.2881 37.5 14.585 36.7695 11.8545ZM16.5234 25.5225V15.0537L25.5859 20.249L16.5234 25.5225Z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full flex flex-col">
+            <hr class="my-3">
+            <span class="text-center">© 2022 Infinity & Beyond, LLC. All rights reserved to Rodrigo Oliveira Santos.</span>
+          </div>
+        </div>
+      </footer>
     </section>
     
     
